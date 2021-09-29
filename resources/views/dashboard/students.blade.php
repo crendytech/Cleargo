@@ -38,7 +38,7 @@
                                     @endif
                                 </div>
                                 <div class="col-md-3">
-                                    <button type="submit" @if($clearance->submission()->status === "approved") disabled @endif class="btn btn-dark align-items-center @if($clearance->submission() !== null) edit @endif" name="submit">@if($clearance->submission() !== null)<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2 align-middle"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg> <span style="margin-left: 10px;">Edit</span> @else Upload @endif</button>
+                                    <button type="submit" @if($clearance->submission() != null && $clearance->submission()->status === "approved") disabled @endif class="btn btn-dark align-items-center @if($clearance->submission() !== null) edit @endif" name="submit">@if($clearance->submission() !== null)<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2 align-middle"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg> <span style="margin-left: 10px;">Edit</span> @else Upload @endif</button>
                                 </div>
                             </div>
                         </form>

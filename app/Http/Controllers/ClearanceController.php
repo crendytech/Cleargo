@@ -142,7 +142,16 @@ class ClearanceController extends Controller
 
     public function edit(Clearance $clearance)
     {
-
+        if(\Auth::user()->role == "admin")
+        {
+            $departments = Department::all()->pluck("id", "name");
+            $faculties = Faculty::all()->pluck("id", "name");
+            return view('clearance.edit', compact('clearance','departments', 'faculties'));
+        }
+        else
+        {
+            return response()->json(['error' => 'Permission denied.'], 401);
+        }
     }
 
     public function update(Request $request, Clearance $clearance)
