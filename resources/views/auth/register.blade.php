@@ -8,7 +8,7 @@
                     <div class="card">
                         <h3 class="card-header text-center">Register</h3>
                         <div class="card-body">
-                            <form method="POST" id="form" action="{{ route('student.submit') }}">
+                            <form method="POST" id="form" action="{{ route('student.submit') }}" autocomplete="off">
                                 @csrf
                                 <div class="form-group mb-3">
                                     <label for="matric">Enter your Matric Number</label>
@@ -21,7 +21,7 @@
                                 </div>
 
                                 <div class="form-group mb-3" id="pass" style="display: none">
-                                    <input type="password" placeholder="Choose Password" id="password" class="form-control" name="password" required>
+                                    <input type="password" placeholder="Choose Password" id="password" class="form-control" name="password" autocomplete="off" required>
                                     @if ($errors->has('password'))
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
                                     @endif
