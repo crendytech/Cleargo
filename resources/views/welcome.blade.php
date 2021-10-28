@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Switch Template</title>
+    <title>Online Clearance System</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|IBM+Plex+Sans:600" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset("assets/css/style.css") }}">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
@@ -17,7 +17,7 @@
                 <div class="brand header-brand">
                     <h1 class="m-0">
                         <a href="{{route("index")}}">
-                            <img class="header-logo-image asset-dark" style="display: inline-block;" src="{{ asset("assets/images/logo-dark.svg") }}" alt="Logo"> <span style="color: white; font-size: 28px;">ClearGo</span>
+                            <img class="header-logo-image asset-dark" style="display: inline-block;" src="{{ asset("assets/images/uniosun logo.jpg") }}" alt="Logo" width="60px" height="60px"> <span style="color: white; font-size: 34px;">Osun State University Clearance Management System</span>
                         </a>
                     </h1>
                 </div>
@@ -30,10 +30,10 @@
             <div class="container">
                 <div class="hero-inner">
                     <div class="hero-copy">
-                        <h1 class="hero-title mt-0">Clearance Management System</h1>
-                        <p class="hero-paragraph">This Project aims at Digitizing and Simplifying Final Clearance for Universities. A Case Study in Uniosun, Osogbo.</p>
+                        <h1 class="hero-title mt-0">Online Clearance System</h1>
+                        <p class="hero-paragraph">This Project aims at Digitizing and Simplifying Final Clearance for Universities. A Case Study in Osun State University</p>
                         <div class="hero-cta">
-                            <a class="button button-primary" href="{{route("login.custom")}}">Login</a>
+                            <a class="button button-primary" href="{{route("login")}}">Login</a>
                             <a class="button button-primary" style="background: linear-gradient(to right, #FFBC48 0, #FE7E1F 100%); color: #fefefe;" href="{{route("student.register")}}">Create an account</a>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                         </div>
                         <div class="hero-media-container">
                             <img class="hero-media-image asset-light" src="{{ asset("assets/images/hero-media-light.svg") }}" alt="Hero media">
-                            <img class="hero-media-image asset-dark" src="{{ asset("assets/images/hero-media-dark.svg") }}" alt="Hero media">
+                            <img class="hero-media-image asset-dark" src="{{ asset("assets/images/uniosun.jpg") }}" alt="Hero media">
                         </div>
                     </div>
                 </div>

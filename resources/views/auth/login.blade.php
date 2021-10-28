@@ -6,20 +6,22 @@
             <div class="row justify-content-center">
                 <div class="col-md-4">
                     <div class="card">
-                        <h3 class="card-header text-center">Login</h3>
+
+                        <div style="text-align: center;"><img src="{{ asset("assets/images/uniosun logo.jpg") }}" class="text-center" style="height: 80px; width: 80px; text-align: center; margin-top: 20px;"></div>
+                        <h3 class="card-header text-center">Login To Clearance Dashboard</h3>
                         <div class="card-body">
                             <form method="POST" action="{{ route('login.custom') }}">
                                 @csrf
                                 <div class="form-group mb-3">
-                                    <input type="text" placeholder="Email / Matric no" id="email" class="form-control" name="email" required
-                                           autofocus>
+                                    <label for="email"></label><input type="text" placeholder="Email / Matric no" id="email" class="form-control" name="email" required
+                                                                      autofocus>
                                     @if ($errors->has('email'))
                                         <span class="text-danger">{{ $errors->first('email') }}</span>
                                     @endif
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <input type="password" placeholder="Password" id="password" class="form-control" name="password" required>
+                                    <label for="password"></label><input type="password" placeholder="Password" id="password" class="form-control" name="password" required>
                                     @if ($errors->has('password'))
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
                                     @endif

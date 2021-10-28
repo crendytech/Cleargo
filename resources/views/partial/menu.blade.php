@@ -1,11 +1,11 @@
 <nav id="sidebar" class="sidebar">
     <div class="sidebar-content js-simplebar">
-        <a class="sidebar-brand" href="https://medishareng.com">
-            <span class="align-middle">ClearGo</span>
+        <a class="sidebar-brand" href="https://uniosun.edu.ng">
+            <span class="align-middle">UNIOSUN CMS</span>
         </a>
 
         <ul class="sidebar-nav">
-            <li class="sidebar-header">
+            <li class="sidebar-brand " >
                 Pages
             </li>
 

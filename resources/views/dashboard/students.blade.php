@@ -10,7 +10,15 @@
         <div class="col-12 col-xl-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Fill Your Clearance Below </h5>
+                    <h1>Follow the instruction below </h1>
+                    <div class="hero-copy">
+                        <h3 class="hero-title mt-0">You are required to upload the following Documents </h3>
+                        <h5>Scan your documents and covert it to pdf before uploading</h5>
+                        <h5>Make sure your print out have apprioval from each necessary clearance department</h5>
+
+
+
+                    </div>
                 </div>
                 <div class="card-body">
                     @foreach($clearances as $clearance)

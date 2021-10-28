@@ -1,5 +1,5 @@
 @php
-    $dir=url('/public/uploads/clearance');
+    $dir=url('/uploads/clearance');
 @endphp
 @extends('admin')
 @section('page-title')

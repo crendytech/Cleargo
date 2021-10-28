@@ -110,16 +110,21 @@ class FacultyController extends Controller
         }
     }
 
-    public function destroy(Faculty $faculty)
+    public function destroy($id)
     {
-//        if(\Auth::user()->type == "admin")
-//        {
-        $faculty->delete();
+      //if(\Auth::user()->type == "admin")
+      //  {
+            $faculty = Faculty::find($id);
+            $faculty->delete();
 
-        return redirect()->route('faculty.index')->with('success', 'Faculty successfully deleted.');
-//        }
+            //dd("Deleted");
+
+        return redirect()->back()->with('success', 'Faculty successfully deleted.');
+       // }
 //        else
 //        {
+//            $faculty = Faculty::find($id);
+//            $faculty->delete();
 //            return redirect()->back()->with('error', 'Permission denied.');
 //        }
     }

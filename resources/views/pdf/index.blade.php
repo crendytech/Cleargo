@@ -12,7 +12,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Cleargo - Clearance</title>
+    <title>Clearance Management System</title>
     <style>
         body{
             font-family: "Agency FB";
@@ -28,9 +28,12 @@
                 <div class="row">
                     <div class="col-8 ml-auto mr-auto">
                         <div class="card py-5">
+                            <div style="text-align: left;"><img src="assets/images/uniosun logo.jpg" class="text-left" style="height: 80px; width: 80px; text-align: left; margin-top: 20px;" alt=""></div>
                             <div>
-                                <h3  style="text-align: center;">ClearGo</h3>
-                                <p  style="text-align: center;">A Clearance Management System</p>
+
+                                <h3  style="text-align: center;">Osun State University</h3>
+                                <h3  style="text-align: center;">Osun State University Clearance Report  </h3>
+
                             </div>
                             <div class="card-header" style="background: #eee; height: 100px; padding: 20px;">
                                 <table>

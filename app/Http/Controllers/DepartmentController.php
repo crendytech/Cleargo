@@ -144,20 +144,20 @@ class DepartmentController extends Controller
         }
     }
 
-    public function destroy(Department $department)
+    public function destroy($id)
     {
-        $res=[];
-        if(\Auth::user()->role == "admin")
-        {
-            $department->delete();
-            $res['status'] = true;
-            $res['message'] = 'Department successfully deleted.';
-        }
-        else
-        {
-            $res['status'] = true;
-            $res['message'] = 'Permission denied.';
-        }
-        return $res;
+        //$res=[];
+       // if(\Auth::user()->role == "admin")
+       // {
+          $department = Department::find($id);
+          $department->delete();
+        return redirect()->back()->with('success', 'Department successfully deleted.');
+      //  }
+      //  else
+//        {
+//            $res['status'] = true;
+//            $res['message'] = 'Permission denied.';
+//        }
+//        return $res;
     }
 }
