@@ -6,6 +6,7 @@ use App\Models\Clearance;
 use App\Models\Submissions;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -161,6 +162,50 @@ class CustomAuthController extends Controller
             $code = random_int(100000, 999999);
         } while (User::where("matric", "=", $code)->first());
         return $code;
+    }
+
+    public function uploadPics()
+    {
+            return view('auth.upload');
+    }
+
+    public function saveUpload(Request $request)
+    {
+        try{
+            $validator = Validator::make(
+                    request()->all(), [
+                        'file' => 'mimes::jpeg,png,jpg|max:20480',
+                    ]
+                );
+
+                if($validator->fails())
+                {
+                    $messages = $validator->getMessageBag();
+
+                    return redirect()->back()->with('error', $messages->first());
+                }else {
+                    if($request->hasFile('file'))
+                    {
+                        $filenameWithExt = $request->file('file')->getClientOriginalName();
+                        $filename        = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+                        $extension       = $request->file('file')->getClientOriginalExtension();
+                        $fileNameToStore = $filename . '_' . time() . '.' . $extension;
+                        $dir             = public_path('uploads/avatar/');
+
+                        if(!file_exists($dir))
+                        {
+                            mkdir($dir, 0777, true);
+                        }
+                        $request->file->move(public_path('uploads/avatar'), $fileNameToStore);
+
+                        Auth()->user()->update(['avatar'=>$fileNameToStore]);
+                    }
+                    return redirect()->back()->with('success', 'Picture added successfully.');
+                }
+        }catch (\Exception $e)
+        {
+            return redirect()->back()->with('error', $e->getMessage());
+        }
     }
 
 

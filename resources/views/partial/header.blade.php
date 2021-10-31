@@ -14,9 +14,10 @@
                 </a>
 
                 <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
-                    <img src="{{(!empty($users->avatar)? $profile.'/'.$users->avatar : $profile.'/avatar.png')}}" class="avatar img-fluid rounded mr-1" alt="" /> <span class="text-dark">{{\Auth::user()->name}}</span>
+                    <img src="{{(!empty(\Auth::user()->avatar)? $profile.'/'.\Auth::user()->avatar : $profile.'/avatar.png')}}" class="avatar img-fluid rounded mr-1" alt="" /> <span class="text-dark">{{\Auth::user()->name}}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="javascript://" data-ajax-popup="true" data-title="Upload Profile Pics" data-url="{{ route("profilepics.show") }}">Upload Pics</a>
                     <a class="dropdown-item" href="{{ route('signout') }}">Log out</a>
                 </div>
             </li>

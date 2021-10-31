@@ -27,6 +27,12 @@ Route::post('matric', [CustomAuthController::class, 'matric'])->name('matric.che
 Route::get('register', [CustomAuthController::class, 'register'])->name('student.register');
 Route::post('register', [CustomAuthController::class, 'studentRegistration'])->name('student.submit');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+Route::get('upload-pics', [CustomAuthController::class, 'uploadPics'])->name('profilepics.show')->middleware([
+    "auth", "\App\Http\Middleware\XSS"
+]);;
+Route::post('upload-pics', [CustomAuthController::class, 'saveUpload'])->name('profilepics.save')->middleware([
+    "auth", "\App\Http\Middleware\XSS"
+]);;
 Route::resource('departments', 'App\Http\Controllers\DepartmentController')->middleware([
     "auth", "\App\Http\Middleware\XSS"
 ]);

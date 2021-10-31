@@ -1,5 +1,6 @@
 @php
     $dir= public_path("assets");
+        $profile=public_path('uploads/avatar');
 @endphp
         <!DOCTYPE html>
 <html lang="en">
@@ -28,9 +29,10 @@
                 <div class="row">
                     <div class="col-8 ml-auto mr-auto">
                         <div class="card py-5">
-                            <div style="text-align: left;"><img src="assets/images/uniosun logo.jpg" class="text-left" style="height: 80px; width: 80px; text-align: left; margin-top: 20px;" alt=""></div>
+                            <div style="float: left;"><img src="assets/images/uniosun logo.jpg" class="text-left" style="height: 80px; width: 80px; text-align: left;" alt=""></div>
                             <div>
-
+                            <div style="float: right;"><img src="{{(!empty(\Auth::user()->avatar)? $profile.'/'.\Auth::user()->avatar : $profile.'/avatar.png')}}" class="text-left" style="height: 80px; width: 80px; text-align: left;" alt=""></div>
+                            <div>
                                 <h3  style="text-align: center;">Osun State University</h3>
                                 <h3  style="text-align: center;">Osun State University Clearance Report  </h3>
 
@@ -65,7 +67,7 @@
                                                     @endif
                                                 </td>
                                                 <td width="100" style="height: 70px; border-bottom: 1px solid #eee;">
-                                                    {{$clearance->submission()->updated_at}}
+                                                    {{$clearance->submission()->updated_at ??}}
                                                 </td>
                                             </tr>
                                         @endforeach

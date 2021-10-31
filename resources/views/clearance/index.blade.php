@@ -22,7 +22,7 @@
                 <tbody id="result">
                 @forelse($clearances as $clearance)
                     <tr>
-{{--                        <td>{{ $clearance->name ?? ""}} </td>--}}
+                        <td>{{ $clearance->name ?? ""}} </td>
                         <td>{{ ucfirst($clearance->type) ?? "" }} </td>
                         <td>{{ $clearance->manager() ?? ""}} </td>
                         <td class="table-action">

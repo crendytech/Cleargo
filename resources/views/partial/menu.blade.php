@@ -42,12 +42,6 @@
                 <i class="align-middle" data-feather="book"></i> <span class="align-middle">Clearance</span>
             </a>
             </li>
-
-            <li class="sidebar-item @if(\Illuminate\Support\Facades\Request::route()->getName() == "submissions" ) active @endif">
-            <a class="sidebar-link" href="{{ route("submissions.index") }}">
-                <i class="align-middle" data-feather="folder"></i> <span class="align-middle">Submissions</span>
-            </a>
-            </li>
             @endif
             @if(\Auth::user()->role == "student")
                 <li class="sidebar-item @if(\Illuminate\Support\Facades\Request::route()->getName() == "print" ) active @endif">
