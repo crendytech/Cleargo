@@ -1,7 +1,8 @@
 <nav id="sidebar" class="sidebar">
     <div class="sidebar-content js-simplebar">
+        <div style="text-align: center;"><img src="{{ asset("assets/images/uniosun logo.jpg") }}" class="text-center" style="height: 70px; width: 70px; text-align: center; margin-top: 10px; margin-bottom: -15px;" alt=""></div>
         <a class="sidebar-brand" href="https://uniosun.edu.ng">
-            <span class="align-middle">UNIOSUN CMS</span>
+            <p class="align-middle" style="text-align: center; color: white"><b>UNIOSUN CMS</b></p>
         </a>
 
         <ul class="sidebar-nav">

@@ -17,7 +17,7 @@
                 <div class="brand header-brand">
                     <h1 class="m-0">
                         <a href="{{route("index")}}">
-                            <img class="header-logo-image asset-dark" style="display: inline-block;" src="{{ asset("assets/images/uniosun logo.jpg") }}" alt="Logo" width="60px" height="60px"> <span style="color: white; font-size: 34px;">Osun State University Clearance Management System</span>
+                            <img class="header-logo-image asset-dark" style="display: inline-block;" src="{{ asset("assets/images/logos.png") }}" alt="Logo" width="250px" height="250px"> <span style="color: white; font-size:30px;">Osun State University Clearance Management System</span>
                         </a>
                     </h1>
                 </div>
@@ -31,7 +31,7 @@
                 <div class="hero-inner">
                     <div class="hero-copy">
                         <h1 class="hero-title mt-0">Online Clearance System</h1>
-                        <p class="hero-paragraph">This Project aims at Digitizing and Simplifying Final Clearance for Universities. A Case Study in Osun State University</p>
+                        <p class="hero-paragraph">This Project aims at Digitizing and Simplifying Final Clearance for Graduating Students. A Case Study in Osun State University</p>
                         <div class="hero-cta">
                             <a class="button button-primary" href="{{route("login")}}">Login</a>
                             <a class="button button-primary" style="background: linear-gradient(to right, #FFBC48 0, #FE7E1F 100%); color: #fefefe;" href="{{route("student.register")}}">Create an account</a>

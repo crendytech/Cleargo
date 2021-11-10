@@ -34,10 +34,10 @@
                             <div style="float: right;"><img src="{{(!empty(\Auth::user()->avatar)? $profile.'/'.\Auth::user()->avatar : $profile.'/avatar.png')}}" class="text-left" style="height: 80px; width: 80px; text-align: left;" alt=""></div>
                             <div>
                                 <h3  style="text-align: center;">Osun State University</h3>
-                                <h3  style="text-align: center;">Osun State University Clearance Report  </h3>
+                                <h3  style="text-align: center;">Clearance Approval Report  </h3>
 
                             </div>
-                            <div class="card-header" style="background: #eee; height: 100px; padding: 20px;">
+                            <div class="card-header" style="background: #eee; height: 100px; padding: 5spx;">
                                 <table>
                                     <tr>
                                         <td width="250"><p style="font-size: 16px;"> Name:<span style="font-weight: bold;">{{\Auth::user()->name}} </span></p></td>
@@ -67,7 +67,7 @@
                                                     @endif
                                                 </td>
                                                 <td width="100" style="height: 70px; border-bottom: 1px solid #eee;">
-                                                    {{$clearance->submission()->updated_at ??}}
+                                                    {{$clearance->submission()->updated_at }}
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -77,6 +77,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </main>
     </div>

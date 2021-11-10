@@ -6,8 +6,8 @@
             <div class="row justify-content-center">
                 <div class="col-md-4">
                     <div class="card">
-                        <div style="text-align: center;"><img src="{{ asset("assets/images/uniosun logo.jpg") }}" class="text-center" style="height: 80px; width: 80px; text-align: center; margin-top: 20px;" alt=""></div>
-                        <h3 class="card-header text-center">Register</h3>
+                        <div style="text-align: center;"><img src="{{ asset("assets/images/uniosun logo.jpg") }}" class="text-center" style="height: 100px; width: 100px; text-align: center; margin-top: 20px;" alt=""></div>
+                        <h3 class="card-header text-center">Register For Clearance</h3>
                         <div class="card-body">
                             <form method="POST" id="form" action="{{ route('student.submit') }}" autocomplete="off">
                                 @csrf

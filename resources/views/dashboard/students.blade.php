@@ -3,7 +3,7 @@
 @endphp
 @extends('admin')
 @section('page-title')
-    Clearance
+    Clearance Section
 @endsection
 @section('content')
     <div class="row">
@@ -14,7 +14,7 @@
                     <div class="hero-copy">
                         <h3 class="hero-title mt-0">You are required to upload the following Documents </h3>
                         <h5>Scan your documents and covert it to pdf before uploading</h5>
-                        <h5>Make sure your print out have apprioval from each necessary clearance department</h5>
+                        <h5>Make sure your print out have approval from each necessary clearance department</h5>
 
 
 

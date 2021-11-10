@@ -1,6 +1,7 @@
 <div class="form-box">
     <form method="post" action="{{route("clearance.update", $clearance)}}">
         {{ csrf_field() }}
+
         <div class="row">
         <div class="col-md-12">
             <div class="form-group">

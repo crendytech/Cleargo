@@ -29,7 +29,7 @@ class StudentsImport implements ToModel, WithHeadingRow, WithValidation
             "name" => $users["name"],
             "faculty_id" => $faculty->id,
             "department_id" => $department->id,
-            "password" => "12345",
+            "password" => " ",
             "role" => "student",
         ]);
     }

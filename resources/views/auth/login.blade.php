@@ -7,7 +7,7 @@
                 <div class="col-md-4">
                     <div class="card">
 
-                        <div style="text-align: center;"><img src="{{ asset("assets/images/uniosun logo.jpg") }}" class="text-center" style="height: 80px; width: 80px; text-align: center; margin-top: 20px;"></div>
+                        <div style="text-align: center;"><img src="{{ asset("assets/images/uniosun logo.jpg") }}" class="text-center" style="height: 100px; width: 100px; text-align: center; margin-top: 20px;"></div>
                         <h3 class="card-header text-center">Login To Clearance Dashboard</h3>
                         <div class="card-body">
                             <form method="POST" action="{{ route('login.custom') }}">

@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Cleargo - @yield('page-title')</title>
+    <title>Osun State University CMS @yield('page-title')</title>
 
     <link href="{{ asset("assets/css/app.css") }}" rel="stylesheet">
     @stack('css-page')
